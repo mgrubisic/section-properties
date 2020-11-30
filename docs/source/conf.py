@@ -15,18 +15,18 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../../'))
-autodoc_mock_imports = ['pybind11', 'meshpy']
+autodoc_mock_imports = ['pybind11', 'meshpy', 'shapely']
 
 # -- Project information -----------------------------------------------------
 
 project = 'sectionproperties'
-copyright = '2019, Robbie van Leeuwen'
+copyright = '2020, Robbie van Leeuwen'
 author = 'Robbie van Leeuwen'
 
 # The short X.Y version
-version = '1.0.3'
+version = '1.0.7'
 # The full version, including alpha/beta/rc tags
-release = '1.0.3'
+release = '1.0.7'
 
 
 # -- General configuration ---------------------------------------------------

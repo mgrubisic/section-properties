@@ -44,6 +44,7 @@ $ pip install sectionproperties
 - [x] Custom section geometry input
 - [x] Common section geometry generators
 - [x] Multiple geometry merging
+- [x] Perimeter offset tool
 - [x] Geometry cleaning
 - [ ] JSON input file
 - [ ] .dxf import
@@ -53,6 +54,7 @@ $ pip install sectionproperties
 ### Cross-Section Analysis:
 - [x] Global axis geometric section properties:
   - [x] Area
+  - [x] Perimeter
   - [x] First moments of area
   - [x] Second moments of area
   - [x] Elastic centroid
