@@ -333,6 +333,16 @@ Shear Stress (:math:`\sigma_{zxy}`)
 ..  automethod:: sectionproperties.analysis.cross_section.StressPost.plot_vector_zxy
     :noindex:
 
+Major Principal Stress (:math:`\sigma_{1}`)
+"""""""""""""""""""""""""""""""""""""""""""
+..  automethod:: sectionproperties.analysis.cross_section.StressPost.plot_stress_1
+    :noindex:
+
+Minor Principal Stress (:math:`\sigma_{2}`)
+"""""""""""""""""""""""""""""""""""""""""""
+..  automethod:: sectionproperties.analysis.cross_section.StressPost.plot_stress_2
+    :noindex:
+
 von Mises Stress (:math:`\sigma_{vM}`)
 """""""""""""""""""""""""""""""""""""""
 ..  automethod:: sectionproperties.analysis.cross_section.StressPost.plot_stress_vm

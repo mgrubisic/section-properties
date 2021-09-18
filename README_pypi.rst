@@ -106,7 +106,7 @@ Cross-Section Analysis:
 -  [x] Shear section properties:
 
    -  [x] Shear centre (elastic method)
-   -  [x] Shear centre (Trefftz’s method)
+   -  [x] Shear centre (Trefftz's method)
    -  [x] Shear areas (global axis)
    -  [x] Shear areas (principal axis)
 
@@ -136,6 +136,16 @@ Additional Modules:
 -  [ ] Optimisation
 -  [ ] Reinforced Concrete
 -  [ ] Steel
+
+
+## Disclaimer:
+--------------
+
+*sectionproperties* is an open source engineering tool that continues to benefit from the
+collaboration of many contributors. Although efforts have been made to ensure the that relevant
+engineering theories have been correctly implemented, it remains the user's responsibility to
+confirm and accept the output. Refer to the license for clarification of the conditions
+of use.
 
 .. _Subscribe: http://eepurl.com/dMMUeg
 .. _documentation: https://sectionproperties.readthedocs.io/

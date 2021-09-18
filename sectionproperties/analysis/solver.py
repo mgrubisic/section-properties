@@ -11,7 +11,7 @@ def solve_cgs(k, f, m=None, tol=1e-5):
     :type k: :class:`scipy.sparse.csc_matrix`
     :param f: N x 1 right hand side of the linear system
     :type f: :class:`numpy.ndarray`
-    :param float tol: Tolerance for the solver to acheieve. The algorithm terminates when either
+    :param float tol: Tolerance for the solver to achieve. The algorithm terminates when either
         the relative or the absolute residual is below tol.
     :param m: Preconditioner for the linear matrix approximating the inverse of k
     :type m: :class:`scipy.linalg.LinearOperator`
@@ -22,9 +22,9 @@ def solve_cgs(k, f, m=None, tol=1e-5):
     :raises RuntimeError: If the CGS iterative method does not converge
     """
 
-    (u, exit) = linalg.cgs(k, f, tol=tol, M=m)
+    (u, info) = linalg.cgs(k, f, tol=tol, M=m)
 
-    if (exit != 0):
+    if info != 0:
         raise RuntimeError("CGS iterative method did not converge.")
 
     return u
@@ -38,7 +38,7 @@ def solve_cgs_lagrange(k_lg, f, tol=1e-5, m=None):
     :type k: :class:`scipy.sparse.csc_matrix`
     :param f: N x 1 right hand side of the linear system
     :type f: :class:`numpy.ndarray`
-    :param float tol: Tolerance for the solver to acheieve. The algorithm terminates when either
+    :param float tol: Tolerance for the solver to achieve. The algorithm terminates when either
         the relative or the absolute residual is below tol.
     :param m: Preconditioner for the linear matrix approximating the inverse of k
     :type m: :class:`scipy.linalg.LinearOperator`
@@ -50,9 +50,9 @@ def solve_cgs_lagrange(k_lg, f, tol=1e-5, m=None):
         Lagrangian multiplier method exceeds the tolerance
     """
 
-    (u, exit) = linalg.cgs(k_lg, np.append(f, 0), tol=tol, M=m)
+    (u, info) = linalg.cgs(k_lg, np.append(f, 0), tol=tol, M=m)
 
-    if (exit != 0):
+    if info != 0:
         raise RuntimeError("CGS iterative method did not converge.")
 
     # compute error

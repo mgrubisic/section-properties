@@ -15,6 +15,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../../'))
+from sectionproperties import __version__ as ver
 autodoc_mock_imports = ['pybind11', 'meshpy', 'shapely']
 
 # -- Project information -----------------------------------------------------
@@ -23,10 +24,12 @@ project = 'sectionproperties'
 copyright = '2020, Robbie van Leeuwen'
 author = 'Robbie van Leeuwen'
 
-# The short X.Y version
-version = '1.0.7'
+# The short Major.Minor.Build version
+_v = ver.split('.')
+_build = ''.join([c for c in _v[2] if c.isdigit()])
+version = _v[0] + '.' + _v[1] + '.' + _build
 # The full version, including alpha/beta/rc tags
-release = '1.0.7'
+release = ver
 
 
 # -- General configuration ---------------------------------------------------
@@ -88,7 +91,7 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = []
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
