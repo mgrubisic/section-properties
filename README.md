@@ -1,108 +1,83 @@
-![alt text](logo.png "sectionproperties")
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/_static/logo-dark-mode.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/_static/logo-light-mode.png">
+  <img alt="sectionproperties logo" src="docs/_static/logo-light-mode.png">
+</picture>
 
-[![Build Status](https://travis-ci.com/robbievanleeuwen/section-properties.svg?branch=master)](https://travis-ci.com/robbievanleeuwen/section-properties) [![Documentation Status](https://readthedocs.org/projects/sectionproperties/badge/?version=latest)](https://sectionproperties.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/sectionproperties.svg)][pypi_]
+[![Status](https://img.shields.io/pypi/status/sectionproperties.svg)][status]
+[![Python Version](https://img.shields.io/pypi/pyversions/sectionproperties)][python version]
+[![License](https://img.shields.io/pypi/l/sectionproperties)][license]
+[![Read the documentation at https://sectionproperties.readthedocs.io/](https://img.shields.io/readthedocs/sectionproperties/stable.svg?label=Read%20the%20Docs)][read the docs]
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)][uv]
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)][ruff]
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
+[![Tests](https://github.com/robbievanleeuwen/section-properties/actions/workflows/ci.yml/badge.svg?branch=master)][tests]
+[![Codecov](https://codecov.io/gh/robbievanleeuwen/section-properties/branch/master/graph/badge.svg)][codecov]
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.06105/status.svg)][joss]
 
-A python package for the analysis of arbitrary cross-sections using the finite element method written by Robbie van Leeuwen. *sectionproperties* can be used to determine section properties to be used in structural design and visualise cross-sectional stresses resulting from combinations of applied forces and bending moments.
+[pypi_]: https://pypi.org/project/sectionproperties/
+[status]: https://pypi.org/project/sectionproperties/
+[python version]: https://pypi.org/project/sectionproperties
+[read the docs]: https://sectionproperties.readthedocs.io/
+[uv]: https://github.com/astral-sh/uv
+[ruff]: https://github.com/astral-sh/ruff
+[pre-commit]: https://github.com/pre-commit/pre-commit
+[tests]: https://github.com/robbievanleeuwen/section-properties/actions/workflows/ci.yml
+[codecov]: https://app.codecov.io/gh/robbievanleeuwen/section-properties
+[joss]: https://doi.org/10.21105/joss.06105
 
-[Subscribe](http://eepurl.com/dMMUeg) to the mailing list!
+`sectionproperties` is a python package for the analysis of arbitrary cross-sections
+using the finite element method. `sectionproperties` can be used to determine
+section properties to be used in structural design and visualise cross-sectional
+stresses resulting from combinations of applied forces and bending moments.
 
-## Installation:
+[Subscribe](http://eepurl.com/dMMUeg) to the `sectionproperties` mailing list!
 
-For more detailed installation instructions, refer to the [documentation](https://sectionproperties.readthedocs.io/).
+## Installation
 
-### UNIX (MacOS/Linux):
+You can install `sectionproperties` via [pip] from [PyPI]:
 
+```shell
+pip install sectionproperties
 ```
-$ pip install sectionproperties
-```
 
-### Windows
+## Documentation
 
-Install *meshpy* by downloading the appropriate [installation wheel](https://www.lfd.uci.edu/~gohlke/pythonlibs/#meshpy).
+`sectionproperties` is fully documented including a user walkthrough, examples,
+background theory and an API guide. The documentation can found at
+[https://sectionproperties.readthedocs.io/](https://sectionproperties.readthedocs.io/).
 
-Navigate to the location of the downloaded wheel and install using pip:
+## Features
 
-```
-$ cd Downloads
-$ pip install MeshPy‑2018.2.1‑cp36‑cp36m‑win_amd64.whl
-```
+See the complete list of `sectionproperties` features
+[here](https://sectionproperties.readthedocs.io/en/stable/user_guide.html).
 
-Once *meshpy* has been installed, *sectionproperties* can be installed:
+## Contributing
 
-```
-$ pip install sectionproperties
-```
+Contributions are very welcome. To learn more, see the [Contributor Guide].
 
-## Documentation:
+## License
 
-*sectionproperties* has a fully documented python API which you can find at [https://sectionproperties.readthedocs.io/](https://sectionproperties.readthedocs.io/). To read more about the theory behind the program, its implementation and some more examples, check out my blog at [https://robbievanleeuwen.github.io/](https://robbievanleeuwen.github.io/).
+Distributed under the terms of the [MIT license][license], `sectionproperties` is free
+and open source software.
 
-## Current Capabilities:
+## Support
 
-### Pre-Processor:
-- [x] Python API
-- [x] Custom section geometry input
-- [x] Common section geometry generators
-- [x] Multiple geometry merging
-- [x] Perimeter offset tool
-- [x] Geometry cleaning
-- [ ] JSON input file
-- [ ] .dxf import
-- [x] Quadratic triangular mesh generation
-- [x] Composite material properties
+Found a bug 🐛, or have a feature request ✨, raise an issue on the
+GitHub [issue tracker](https://github.com/robbievanleeuwen/section-properties/issues)
+Alternatively you can get support on the
+[discussions](https://github.com/robbievanleeuwen/section-properties/discussions) page.
 
-### Cross-Section Analysis:
-- [x] Global axis geometric section properties:
-  - [x] Area
-  - [x] Perimeter
-  - [x] First moments of area
-  - [x] Second moments of area
-  - [x] Elastic centroid
-- [x] Centroidal axis geometric section properties:
-  - [x] Second moments of area
-  - [x] Elastic section moduli
-  - [ ] Yield moment
-  - [x] Radii of gyration
-  - [x] Plastic centroid
-  - [x] Plastic section moduli
-  - [x] Shape factors
-- [x] Principal axis geometric section properties:
-  - [x] Second moments of area
-  - [x] Elastic section moduli
-  - [ ] Yield moment
-  - [x] Radii of gyration
-  - [x] Plastic centroid
-  - [x] Plastic section moduli
-  - [x] Shape factors
-- [x] Warping section properties:
-  - [x] Torsion constant
-  - [x] Warping constant
-- [x] Shear section properties:
-  - [x] Shear centre (elastic method)
-  - [x] Shear centre (Trefftz's method)
-  - [x] Shear areas (global axis)
-  - [x] Shear areas (principal axis)
-- [x] Cross-section stresses
+## Disclaimer
 
-### Solver:
-- [x] Direct solver
-- [x] CGS iterative solver
-- [x] Sparse matrices
+`sectionproperties` is an open source engineering tool that continues to benefit from
+the collaboration of many contributors. Although efforts have been made to ensure the
+that relevant engineering theories have been correctly implemented, it remains the
+user's responsibility to confirm and accept the output. Refer to the
+[license][license] for clarification of the conditions of use.
 
-### Post-Processor:
-- [x] Plot geometry
-- [x] Plot mesh
-- [x] Plot centroids
-- [x] Plot cross-section stresses
-- [x] Retrieve cross-section stresses
-- [ ] Generate cross-section report
-- [ ] Export to Paraview
-
-### Additional Modules:
-- [ ] Optimisation
-- [ ] Reinforced Concrete
-- [ ] Steel
-
-## Disclaimer:
-
-*sectionproperties* is an open source engineering tool that continues to benefit from the collaboration of many contributors. Although efforts have been made to ensure the that relevant engineering theories have been correctly implemented, it remains the user's responsibility to confirm and accept the output. Refer to the [license](LICENSE) for clarification of the conditions of use.
+[pypi]: https://pypi.org/
+[pip]: https://pip.pypa.io/
+[license]: https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE
+[contributor guide]: https://github.com/robbievanleeuwen/section-properties/blob/master/CONTRIBUTING.md
